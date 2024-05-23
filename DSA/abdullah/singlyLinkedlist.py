@@ -50,6 +50,17 @@ class SL:
         del(ptr.next.next)
         ptr.next=None
         
+    def updateAthead(self,data):
+        self.head.data=data
+    
+    def updateAttail(self,data):
+        ptr=self.head
+        while(ptr.next):
+            ptr=ptr.next
+        ptr.data=data
+        
+        
+        
             
         
 
@@ -73,6 +84,13 @@ li1.displayList()
 li1.deleteAttail()
 print("after")
 li1.displayList()
+print("after update at head")
+li1.updateAthead(99)
+li1.displayList()
+print("after update at head")
+li1.updateAttail(83)
+li1.displayList()
+
 # print("done")
 
 
